@@ -206,7 +206,7 @@ public class Converter {
 
 // INSERT YOUR CODE HERE
 
-				rowdata[0] = elements[0];
+				rowdata[0] = csvrow[i];
 
 				
                 
@@ -214,8 +214,10 @@ public class Converter {
                 
 // INSERT YOUR CODE HERE
 
-				for (int j = 1; j < row.size(); j++) {
-					rowdata[j] = elements[j];
+				for (int j = 0; j < rowdata.length; j++) {
+					if(j > 0){
+                                             rowdata[j] = elements[j-1];
+                                        }
 				}
                 
                 /* Write new row */
